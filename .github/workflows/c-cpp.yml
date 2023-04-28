@@ -1,0 +1,17 @@
+name: C/C++ with Make
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Compile and run C code
+      run: |
+        gcc code.c -o code ./code
