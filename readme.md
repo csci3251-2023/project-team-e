@@ -13,8 +13,13 @@ In this project, our team will work out several issues according to the tasks.
 |  7  |  Register your repo |
 
 ## Code
+```c
+{%include_relative code.c%}
+```
+![Workflow Status](https://github.com/csci3251-2023/project-team-e/actions/workflows/c-cpp.yml/badge.svg)
 
 ## Contributors
-
-
-**Please read `tasks.md` to start your work.**
+{% for stu in site.stu %}
+  >> !({{ stu.image }})@{{ stu.user }} {{( stu.name )}}
+  {{ "\t" }}>> {{ stu.content | markdownify }}
+{% endfor %}
