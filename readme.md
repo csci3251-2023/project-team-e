@@ -15,6 +15,7 @@ In this project, our team will work out several issues according to the tasks.
 ## Code
 
 ## Contributors
-
-
-**Please read `tasks.md` to start your work.**
+{% for stu in site.stu %}
+  >> !({{ stu.image }})@{{ stu.user }} {{( stu.name )}}
+  {{ "\t" }}>> {{ stu.content | markdownify }}
+{% endfor %}
